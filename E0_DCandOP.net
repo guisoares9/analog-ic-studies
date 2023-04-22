@@ -1,0 +1,19 @@
+* C:\users\guisoares\My Documents\google-drive\Engenharia-Mecatronica-USP\Twente\Library and Exercises-update 2022\E0_DCandOP.asc
+VDN N001 0 3
+VGN N004 0 1 AC 1
+VDP N002 0 -3
+VGP N003 0 1
+Rdn N001 out 1
+M2 out N004 0 0 NMOS_VE2_level1
+M4 N002 N003 0 0 PMOS_VE2_level1
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\guisoares\Local Settings\Application Data\LTspice\lib\cmp\standard.mos
+* Excercise 1: "DC-simulation" of ID(VGS) of an NMOS transistor using parameters Razavi page 35.\nTo test the PMOS change the circuit as needed. \nThe transistor model name should be NMOS_VE2_level1 (for NMOS) or PMOS_VE2_level1 (for PMOS).\nYou can find detailed model information by opening  ~\\lib\\cmp\\standard.mos\n \nAnalysis types defined (select by Edit menu -> SPICE Analysis; or directly edit red text with point):\n* DC analysis of output voltage, input current and input impedance (using derivative dV(Amp_in)/dI(Amp_in))\n* DC Operating Point (.OP) analysis (use View => SPICE Error Log \n* DC transfer function (.TF) analysis\n* Right click the simulation command line to switch between different analysis (e.g. sweep VGP instead of VGN)\n \n*There are three basic means of selecting plotted traces. \n  1.  Probing directly from the schematic. plot voltage(click at a wire); plot current (click on the body of the component).\n  2.  Menu command Plot Settings=>Visible Traces (Click first on Plot to show the "Plot Settings" Menu options)\n  3.  Menu command Plot Settings=>Add Trace
+* * Both the View=>Visible Traces and View=>Add Trace commands allow one to enter an expression of data.\nAnother method to to plot an expression of available simulation data traces is to move the mouse to the \ntrace's label and right click.  This dialog box also allows you to set the trace's color and allows you to attach \na cursor to the waveform.\n* Note: the mathematical operations "derivative" is "d( )", see help "waveform arithmatic" or file "LTspice_Waveform_Arithmetic.pdf"
+* Simulation file for AAICE exercise E1. Before you start, look through the LTSpice menu and try the bottons.\nRight-click components or texts to change their names and properties. If case of  problems, see the LTSPICE pdf-file manual or (limited) Help button above.
+.tf VGN 0 3 0.01
+;op
+;dc VGN 0 3 0.01
+.backanno
+.end

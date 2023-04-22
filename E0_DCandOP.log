@@ -1,0 +1,8 @@
+Circuit: * C:\users\guisoares\My Documents\google-drive\Engenharia-Mecatronica-USP\Twente\Library and Exercises-update 2022\E0_DCandOP.asc
+
+Error on line 22 : .tf vgn 0 3 0.01
+	Syntax error: voltage or current expected.
+Model "nmos_ve2_level1": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Model "pmos_ve2_level1": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Direct Newton iteration for .op point succeeded.
+Fatal Error: Transfer function source  not in circuit

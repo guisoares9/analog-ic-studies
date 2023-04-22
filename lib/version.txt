@@ -1,0 +1,37 @@
+6 Januari 2011:		Added BB135 and symbol for the 1N4001 (Jasper)
+
+28 September 2010:	Added LM124 (Jasper)
+
+16 April 2010:		Added LM 748 (thanks AJ)
+
+19 Feb 2010		Reworked for LT-Spice IV and relative paths
+
+25 Jan 2010:		Added BD139 and BD140 (RZ)
+			IBM IC mosfets from Axiom added in 'overige componenten'
+			Moved UMC13 mosfets to 'overige componenten'
+
+24 April 2009:		Added 1N4001 diode (RZ)
+
+4 March 2009:		Changed CDG0 (*100) of AAICE level 1 mosfets to match Razavi table 2.1. (thanks Remko)
+
+7 Jan 2009:		Replaced BS170 and ZVP2106A models with subckt models because of HF modeling errors
+
+15 July 2008: 		Added MAX942 comparator
+
+26 June 2008:		Added BF199 transistor (550MHz fT compared to 100MHz for BC550)
+
+13 May 2008:		Added CA3130 and CA3140 models (special thanks to Niels) (RZ)
+
+8 Jan 2008:		Changed C's in BS170 and ZVP2106A more like datasheet (simulated too fast during SoC) (RZ)
+
+29 Aug 2007:		Added HEF4007UB transistors (RZ)
+			Added channel modulation to BS170, STP36NF06 and FQP17P06 (RZ)
+
+28 Aug 2007:		Added VAICE level1 mosfets (RZ)
+			Added VAICE project discrete bipolar transistors (RZ)
+			Added UMC 0.18um mosfets for general purpose (RZ,GW))
+
+2 May 2007: 		Created UMC Low-VT 0.13um subcircuit (Gerard Wienk)
+			Added UMC Low-VT 0.13um mosfets for SoC-design (RZ)
+
+27 Oct 2006: 		Library created for ELBAS/ELFUN, added discrete components (Ronan van der Zee)

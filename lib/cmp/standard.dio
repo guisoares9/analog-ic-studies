@@ -1,0 +1,38 @@
+
+
+
+
+
+**************************************
+*
+*   Practicum ELBAS model library   
+*
+*   Created by Ronan van der Zee
+*
+*   December 2004
+*   Modified August 2006
+*
+**************************************
+
+
+.model 1N4148 D(Is=2.682n N=1.836 Rs=.5664 Ikf=44.17m Xti=3 Eg=1.11 Cjo=4p
++               M=.3333 Vj=.5 Fc=.5 Isr=1.565n Nr=2 Bv=100 Ibv=100u Tt=11.54n)
+
+.model 1N4001 D(IS=2.55E-9 RS=0.042 N=1.75 TT=5.76E-6 CJO=1.85E-11 
++ 		VJ=0.75 M=0.333 BV=50 IBV=1E-5 )
+
+.model BB135 D(RS=.7 CJO=23.179E-12 M=1.0368 VJ=2.4894 type=varactor)
+
+******************************************
+
+* From the original library:
+
+.model BAT54       D(Is=.1u    Rs=2.2    N=1     Cjo=12p  M=.3   Eg=.69 Xti=2 Iave=300m Vpk=30  mfg=Vishay   type=Schottky)
+
+.model BZX84C6V2L  D(Is=1.5n   Rs=.5             Cjo=185p        nbv=3 bv=6.2 Ibv=1m    Vpk=6.2 mfg=Motorola type=zener   )
+.model BZX84C8V2L  D(Is=0.8n   Rs=.5             Cjo=135p        nbv=3 bv=8.2 Ibv=1m    Vpk=8.2 mfg=Motorola type=zener   )
+.model BZX84C10L   D(Is=0.6u   Rs=.5             Cjo=150p        nbv=5 bv=10  Ibv=1m    Vpk=10  mfg=Motorola type=zener   )
+.model BZX84C12L   D(Is=0.6u   Rs=.5             Cjo=150p        nbv=5 bv=12  Ibv=1m    Vpk=12  mfg=Motorola type=zener   )
+.model BZX84C15L   D(Is=0.6u   Rs=.5             Cjo=110p        nbv=6 bv=15  Ibv=1m    Vpk=15  mfg=Motorola type=zener   )
+
+

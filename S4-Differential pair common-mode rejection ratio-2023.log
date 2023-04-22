@@ -1,0 +1,35 @@
+Circuit: * Z:\home\guisoares\Documents\google-drive\Engenharia-Mecatronica-USP\Twente\Library and Exercises-update 2022\S4-Differential pair common-mode rejection ratio-2023.asc
+
+Ignoring BSIM parameter XL
+Ignoring BSIM parameter XW
+Ignoring BSIM parameter ACM
+Ignoring BSIM parameter LDIF
+Ignoring BSIM parameter HDIF
+Ignoring BSIM parameter CALCACM
+WARNING: Less than two connections to node vdmoutdiffpair.  This node is used by eoutcs1.
+WARNING: Less than two connections to node vdmoutmacromodel.  This node is used by eoutcs2.
+WARNING: Less than two connections to node vdifout.  This node is used by ediff.
+Warning: LTspice supports BSIM3 version 3.3.0. Your model specified an unrecognized version: 3.2400e+00
+Warning:  Acde = 0.3 is too small.
+Warning: LTspice supports BSIM3 version 3.3.0. Your model specified an unrecognized version: 3.2400e+00
+Warning:  Acde = 0.3 is too small.
+Direct Newton iteration for .op point succeeded.
+
+Date: Tue Feb 21 16:00:01 2023
+Total elapsed time: 1.460 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 6041
+traniter = 6034
+tranpoints = 3018
+accept = 3018
+rejected = 0
+matrix size = 35
+fillins = 0
+solver = Normal
+Avg thread counts: 1.0/1.1/1.1/1.0
+Matrix Compiler1: 876 bytes object code size  0.6/0.5/[0.3]
+Matrix Compiler2: 2.38 KB object code size  0.6/0.8/[0.4]
+

@@ -1,0 +1,191 @@
+
+**************************************
+*
+*   Practicum ELBAS model library   
+*
+*   Created by Ronan van der Zee
+*
+*
+**************************************
+
+
+.model BC550    NPN(Is=7.049f Xti=3 Eg=1.11 Vaf=59.93 Bf=375.6 Ise=56.03f
++               Ne=1.553 Ikf=87.07m Nk=.4901 Xtb=1.5 Br=2.886 Isc=7.371p
++               Nc=1.508 Ikr=5.426 Rc=1.175 Cjc=5.5p Mjc=.3132 Vjc=.4924 Fc=.5
++               Cje=11.5p Mje=.6558 Vje=.5 Tr=10n Tf=417.3p Itf=1.512 Xtf=39.51
++               Vtf=10)
+*		PHILIPS	BC550B	pid=bc549b	case=TO92
+*		91-07-31 dsq
+
+
+****************************************
+
+
+.model MJE3055	NPN(Is=974.4f Xti=3 Eg=1.11 Vaf=50 Bf=99.49 Ne=1.941
++		Ise=902.5p Ikf=4.029 Xtb=1.5 Br=2.949 Nc=2 Isc=0 Ikr=0 Rc=.1
++		Cjc=276p Vjc=.75 Mjc=.3333 Fc=.5 Cje=569.1p Vje=.75 Mje=.3333
++		Tr=971.7n Tf=39.11n Itf=20 Vtf=10 Xtf=2 Rb=.1)
+*		Texas Inst.	pid=2N3055	case=TO3
+
+
+****************************************
+
+
+.model BC560    PNP(Is=1.02f Xti=3 Eg=1.11 Vaf=51.26 Bf=289.6 Ise=9.846f
++               Ne=1.845 Ikf=.1026 Nk=.5413 Xtb=1.5 Br=6.124 Isc=1.113f Nc=1.97
++               Ikr=.2035 Rc=1.078 Cjc=9.81p Mjc=.332 Vjc=.4865 Fc=.5 Cje=30p
++               Mje=.3333 Vje=.5 Tr=10n Tf=612.4p Itf=1.287 Xtf=25.55 Vtf=10)
+*		PHIILIPS BC560B	pid=bc559b	case=TO92
+*		91-08-02 dsq
+
+
+*******************************************
+
+
+.MODEL MJE2955	   PNP(Is=66.19f Xti=3 Eg=1.11 Vaf=100 Bf=137.6 Ise=862.2f
++   Ne=1.481 Ikf=1.642 Nk=.5695 Xtb=2 Br=5.88 Isc=273.5f Nc=1.24
++   Ikr=3.555 Rc=79.39m Cjc=870.4p Mjc=.6481 Vjc=.75 Fc=.5
++   Cje=390.1p Mje=.4343 Vje=.75 Tr=235.4n Tf=23.21n Itf=71.33
++   Xtf=5.982 Vtf=10 Rb=.1)
+
+
+**********************************************
+
+
+.MODEL BF199 NPN(IS=4.031E-16 NF=0.9847 ISE=9.187E-17 NE=1.24 BF=122.5 
++    IKF=0.065 VAF=135 NR=0.991 ISC=4.1E-13 NC=1.37 BR=5.036 IKR=0.04 
++    VAR=8 RB=16 IRB=0.0004 RBM=8 RE=0.402 RC=5 XTB=0 EG=1.11 XTI=3 
++    CJE=2.258E-12 VJE=0.444 MJE=0.136 TF=2.92E-10 XTF=8 VTF=8 ITF=0.14 
++    PTF=20 CJC=9.333E-13 VJC=0.2488 MJC=0.1974 XCJC=0.86 TR=3.5E-08 
++    CJS = 0 VJS=0.75 MJS=0.333 FC=0.9001)
+
+*************************************************
+* BD139 model = BD135 model van Philips
+*
+.MODEL BD139 NPN( 
++     IS = 4.815E-14 
++     NF = 0.9897 
++     ISE = 1.389E-14 
++     NE = 1.6 
++     BF = 124.2 
++     IKF = 1.6 
++     VAF = 222 
++     NR = 0.9895 
++     ISC = 1.295E-13 
++     NC = 1.183 
++     BR = 13.26 
++     IKR = 0.29 
++     VAR = 81.4 
++     RB = 0.5 
++     IRB = 1E-06 
++     RBM = 0.5 
++     RE = 0.165 
++     RC = 0.096 
++     XTB = 0 
++     EG = 1.11 
++     XTI = 3 
++     CJE = 1.243E-10 
++     VJE = 0.7313 
++     MJE = 0.3476 
++     TF = 6.478E-10 
++     XTF = 29 
++     VTF = 2.648 
++     ITF = 3.35 
++     PTF = 0 
++     CJC = 3.04E-11 
++     VJC = 0.5642 
++     MJC = 0.4371 
++     XCJC = 0.15
++     TR = 1E-32 
++     CJS = 0 
++     VJS = 0.75 
++     MJS = 0.333 
++     FC = 0.9359 )
+
+**************************************************************
+* BD140 model = BD136 model van Philips
+
+.MODEL BD140 PNP( 
++     IS=7.401E-14
++     NF=0.9938
++     ISE=4.104E-16
++     NE=1.054
++     BF=336.5
++     IKF=0.1689
++     VAF=22.47
++     NR=0.9913
++     ISC=1.290E-14
++     NC=1.100
++     BR=13.91
++     IKR=9.888E-2
++     VAR=30.00
++     RB=0.500
++     IRB=1E-06
++     RBM=0.500
++     RE=0.208
++     RC=5.526E-02
++     XTB=0
++     EG=1.11
++     XTI=3
++     CJE=1.066E-10
++     VJE=0.6900
++     MJE=0.3676
++     TF=2.578E-10
++     XTF=13.56
++     VTF=2.366
++     ITF=1.3040
++     PTF=0
++     CJC=5.234E-11
++     VJC=0.6431
++     MJC=0.4436
++     XCJC=0.440
++     TR=1E-25
++     CJS=0
++     VJS=0.75
++     MJS=0.333
++     FC=0.990 )
+
+
+**********************************************************************
+*
+* SPICE BIBLIOTHEEK T.B.V. PROJEKT VOORTGEZETTE ELEKTRONICA
+* Componenten: CA3086 (NPN), SP419E (PNP), CA3096(NPN/PNP), 4007UB (CMOS ARRAY)
+* Eric Klumperink 26 Feb 1996/ 16 september 1996/Jan 2007 for LTSPICE
+*
+***********************************************************************
+* BIPOLAIRE TRANSISTOR ARRAYS SP419E en CA3086 
+* BRON: COBI bibliotheek Wim de Jager SP433E en SN096C (roughly equivalent)
+* CONVERSIE NAAR ELDO door Eric Klumperink op 26 feb 1996/16 sep 1996
+*
+.MODEL SP419E  PNP(IS=1.480F BF=104 ISE=.173F NE=1.25 IKF=2400U
++              VAF=34.9 BR=7.21 ISC=16.9F NC=2 IKR=327U VAR=10.5
++              RC=30.9 RBM=15.4 RB=51.5 RE=2.18 TF=1.50N CJE=0.58P
++              VJE=0.586 MJE=0.33 TR=16N CJC=0.867P VJC=0.5 MJC=0.33
++              PTF=0.3 XCJC=175M FC=0.95
++              XTB=1 EG=1.21 PT=0.5)
+
+.MODEL CA3086  NPN(IS=.200F BF=168 ISE=.0192F NE=1.25 IKF=20.6M
++              VAF=176 BR=0.29 ISC=59F NC=2 IKR=571U VAR=12.6
++              RC=16.6 RBM=33.8 RB=142 RE=0.56 TF=251P CJE=0.42P
++              VJE=0.727 MJE=0.33 TR=27N CJC=0.29P VJC=0.67 MJC=0.4
++              CJS=1.03P VJS=0.52 MJS=0.33 PTF=0.3 XCJC=0.198 FC=0.95
++              XTB=1.66 EG=1.20 PT=0.5)
+
+.model CA3096N 	NPN(IS=10.0E-15 XTI=3.000E00 EG=1.110E00 VAF=1.00E02
++ 		VAR=1.000E02 BF=466.5E00 ISE=74.286E-15 NE=1.660E00
++ 		IKF=14.000E-03 XTB=0.000E00 BR=.1000E00 ISC=10.005E-15
++ 		NC=2.000E00 IKR=10.00E-03 RC=10.000E00 CJC=786.51E-15
++ 		MJC=0.333E-00 VJC=0.7500E-00 FC=5.000E-01 CJE=1.28E-12
++ 		MJE=.336E-00 VJE=0.750E-00 TR=10.000E-09 TF=490.01E-12
++ 		ITF=.270E-00 XTF=5.38E00 VTF=28.39E00 PTF=0.000E00
++ 		RE=0.0E00 RB=0.00E00 NK=.468
+
+.model CA3096P 	PNP(IS=10.0E-15 XTI=3.000E00 EG=1.110E00 VAF=1.00E02
++		VAR=1.000E02 BF=94.5E00 ISE=976.47E-15 NE=1.990E00
++		IKF=1.1100E-03 XTB=0.000E00 BR=.1000E00 ISC=10.005E-15
++		NC=2.000E00 IKR=10.00E-03 RC=10.000E00 CJC=3.84E-12
++		MJC=0.333E-00 VJC=0.7500E-00 FC=5.000E-01 CJE=1.45E-12
++		MJE=.336E-00 VJE=0.750E-00 TR=10.000E-09 TF=24.3E-9
++		ITF=1.25E-00 XTF=10.05E00 VTF=9.79E00 PTF=0.000E00
++		RE=0.0E00 RB=0.00E00 NK=.53
+

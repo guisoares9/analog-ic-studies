@@ -1,0 +1,92 @@
+
+**************************************
+*
+*   Practicum ELBAS/ELFUN model library   
+*
+*   Created by Ronan van der Zee
+*
+*   Dec 2004, Aug 2007, Jan 2008
+*
+*************************************
+
+
+
+*********************************
+* BS170 model van ??, aangevuld met kanaalverkortingseffect 29/8/2007
+* Cgd verdubbeld, meer in lijn met datasheet 8/1/2008
+*
+* .MODEL BS170 NMOS VTO=1.824 RS=1.572 RD=1.436 RG=270 IS=1E-15 KP=0.1233
+* +CGSO=28E-12 CGDO=7E-12 CBD=30E-12 PB=1 LAMBDA=1.2E-2
+* this model produces inadequate HF results, discarded 7jan2009
+
+
+*********************************
+* ZVP2106A model van fairchild, maar subckt componenten verwerkt in model
+* Capaciteiten groter meer in lijn met datasheet 8/1/2008
+*
+*.MODEL ZVP2106A PMOS VTO=-2.4 RS=2.041 RD=0.697 RG=160 IS=1E-15 KP=0.277
+*+CGSO=75E-9 CGDO=15E-9 CBD=60E-9 PB=1 LAMBDA=1.2E-2
+* Similarly as BS170
+
+****************************************
+
+
+.model STP36NF06	NMOS(Level=3 Gamma=0 Delta=0 Eta=0 Theta=0 Kappa=0.2 nsub=4e15 Vmax=0 Xj=0
++		Tox=100n Uo=600 Phi=.6 Rs=.1459 Kp=20.79u W=.73 L=2u Vto=3.59
++		Rd=80.23m Rds=444.4K Cbd=622.1p Pb=.8 Mj=.5 Fc=.5 Cgso=517.9p
++		Cgdo=137.3p Rg=6.675 Is=2.438p N=1 Tt=137n)
+*		Int'l Rectifier	pid=IRFC120	case=TO220
+*		88-08-25 bam	creation
+*
+* Model is van de IRF520, spicemodellen van ST zijn erg gecompliceerd (subckt)
+* Aangevuld met kappa=0.2 en nsub=4e15 voor kanaalverkortingseffect 29/8/2007
+*
+*******************************************
+
+
+.model FQP17P06	PMOS(Level=3 Gamma=0 Delta=0 Eta=0 Theta=0 Kappa=0.1 nsub=4e15 Vmax=0 Xj=0
++		Tox=100n Uo=300 Phi=.6 Rs=.2954 Kp=10.42u W=.72 L=2u Vto=-3.0
++		Rd=.1544 Rds=444.4K Cbd=899.2p Pb=.8 Mj=.5 Fc=.5 Cgso=2.171n
++		Cgdo=130.7p Rg=2.447 Is=2.179E-18 N=2 Tt=325n)
+*		Int'l Rectifier  pid=IRFC9120	case=TO220
+*		88-08-25 bam	creation
+* Model is van IRF9520 (wel Vto gewijzigd), omdat Fairchild model subckt is.
+* Aangevuld met kappa=0.1 en nsub=4e15 voor kanaalverkortingseffect 29/8/2007
+*
+********************************************
+
+
+
+********************************************************************************
+*
+* LTSpice LIBRARY FOR "ADVANCED ELECTRONICS" COURSE and PROJECT
+* E.A.M. Klumperink, e.a.m.klumperink@utwente.nl
+* Modified by Ronan van der Zee, 28 august 2007
+* Increased CGD0 *100 to match with Razavi table 2.1 (thanks Remko Struiksma) 4 March 2009
+*
+********************************************************************************
+* 
+* Parameter Source: B. Razavi, "Design of Analog CMOS Integrated Circuits", page 35
+*
+* Level1 model:  	level1: Simple handcalculation model, data table 2.1
+*			(ideal square-law + body effect and channel length reduction)
+
+*
+********************************************************************************
+.MODEL NMOS_VE2_level1 NMOS (LEVEL=1 VTO=0.7 GAMMA=0.45 PHI=0.9 
++ NSUB=9E14 LD=0 UO=350 LAMBDA=0.1 TOX=9E-9 PB=0.9 CJ=0.56E-3 CJSW=0.35E-11
++ MJ=0.6 MJSW=0.2 CGDO=0.4E-9 JS=1E-8)
+
+.MODEL PMOS_VE2_level1 PMOS (LEVEL=1 VTO=-0.8 GAMMA=0.4 PHI=0.8 
++ NSUB=5E14 LD=0 UO=100 LAMBDA=0.2 TOX=9E-9 PB=0.9 CJ=0.94E-3 CJSW=0.32E-11
++ MJ=0.5 MJSW=0.3 CGDO=0.3E-9 JS=0.5E-8)
+
+********************************************************************************
+* HEF4007UB transistoren
+*
+.model HEF4007UBnmos nmos(Level=1 Tox=300n Uo=600 Kp=20.54u Vto= 1.3
++  PHI=0.7  gamma=3.5  
++               Lambda=15m Cbd=4p Cbs=4p Cgdo=1.7n Cgso=1.7n Rs=1 Rd=1)
+.model HEF4007UBpmos pmos(Level=1 Tox=300n Uo=300 Kp=10.32u Vto=-1.5
++  PHI=0.7  gamma=3  Lambda=15m Cbd=8p Cbs=8p Cgdo=1.7n Cgso=1.7n Rs=1 Rd=1)
+ 
